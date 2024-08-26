@@ -40,8 +40,8 @@ const Statistics = (props) => {
     const positiveScore = props.good / props.total
     return (
         <>
-            <StatisticLine text="Average:" value={avgScore}/>
-            <StatisticLine text="Positive:" value={positiveScore * 100 + '%'}/>
+            <StatisticLine text="Average:" value={avgScore.toFixed(2)}/>
+            <StatisticLine text="Positive:" value={(positiveScore * 100).toFixed(2) + '%'}/>
         </>
     )
 }
