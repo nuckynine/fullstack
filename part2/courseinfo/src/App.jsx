@@ -48,6 +48,7 @@ const App = () => {
     ]
     return (
         <div>
+            <h1>Web Development Curriculum</h1>
             <Courses key={courses.id} courses={courses}/>
         </div>
     )

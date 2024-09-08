@@ -1,5 +1,5 @@
 ﻿const Header = (props) => {
-    return <h1>{props.name}</h1>
+    return <h2>{props.name}</h2>
 }
 
 const Part = (data) => {
@@ -29,14 +29,13 @@ const Total = (props) => {
 
 const Course = ({courses}) => {
     return (
+        courses.map(course =>
         <>
-            <Header name={courses[0].name}/>
-            <Content parts={courses[0].parts}/>
-            <Total parts={courses[0].parts}/>
-            <Header name={courses[1].name}/>
-            <Content parts={courses[1].parts}/>
-            <Total parts={courses[1].parts}/>
+            <Header name={course.name}/>
+            <Content parts={course.parts}/>
+            <Total parts={course.parts}/>
         </>
+        )
     )
 }
 export default Course
